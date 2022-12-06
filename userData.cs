@@ -130,16 +130,7 @@ namespace BUM
 
                     if (DialogResult == DialogResult.Yes)
                     {
-                        string[] archivos = Directory.GetFiles(ruta + BUM + "\\" + BU);
-                        if (archivos.Count() > 0)
-                        {
-                            foreach (string file in archivos)
-                            {
-                                File.Delete(file);
-                            }
-                        }
-
-                        Directory.Delete(ruta + BUM + "\\" + BU);
+                        Directory.Delete(ruta + BUM + "\\" + BU, true); ///<<<--- recursividad  ¬¬                        
                         actualizarListaSaves();
                     }
                 }
@@ -158,17 +149,13 @@ namespace BUM
                     ListViewItem item = lstJuegos.SelectedItems[0];
                     string ruta = item.SubItems[1].Text;
                     string rutaBU = ruta + BUM + "\\" + txtSave.Text;
-                    string[] files = Directory.GetFiles(ruta);
-                    string fileName = "";
+                    string[] files = Directory.GetFiles(ruta);                    
                     Directory.CreateDirectory(rutaBU);
 
-                    foreach (string file in files)
-                    {
-                        fileName = Path.GetFileName(file);
-                        File.Copy(file, rutaBU + "\\" + fileName);
-                    }
+                    copiarCarpeta(ruta, rutaBU);
 
                     actualizarListaSaves();
+
                     txtSave.Text = "";
 
                 }

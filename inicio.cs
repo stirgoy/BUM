@@ -15,20 +15,20 @@ namespace BUM
 
         void init()
         {
-
             /*
-            ListViewItem test = lstJuegos.Items.Add("uno");
-            test.SubItems.Add("xD");
-            
-            Settings.Default.listaJuegos = "";
-            Settings.Default.Save();
-            
-            string tes = Settings.Default.listaJuegos;
-            MessageBox.Show(tes);
-            
-            string[,] test = crearArrayData();
+                LOCALIZATION
             */
 
+            lstJuegos.Columns[0].Text = strings.str_col_juegos;
+            lstJuegos.Columns[1].Text = strings.str_col_path_saves;
+            btnAnadirJuego.Text = strings.str_add;
+            btnAnadirSave.Text = strings.str_add;
+            btnBorrarJuego.Text = strings.str_delete;
+            btnBorrarSave.Text = strings.str_delete;
+            btnRestaurar.Text = strings.str_restore;
+            btnAbrirUbicacion.Text = strings.str_open_folder;
+
+            //Load user data
             if (!(Settings.Default.listaJuegos == null) && !(Settings.Default.listaJuegos == ""))
             {
                 actualizarLista();               

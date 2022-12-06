@@ -1,5 +1,6 @@
 ﻿using BUM.Properties;
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -82,8 +83,12 @@ namespace BUM
             }
             else
             {
-                MessageBox.Show("El nombre del jueo no puede estar en blanco", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    strings.str_err_blank_game, 
+                    strings.str_error,
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error
+                    );
             }
         }
 
@@ -123,8 +128,9 @@ namespace BUM
                     string ruta = item.SubItems[1].Text;
                     string BU = LstSaves.SelectedItem.ToString();
 
-                    DialogResult = MessageBox.Show("¿Seguro que quieres borrar el backup " + BU + "?",
-                        "Atencion",
+                    DialogResult = MessageBox.Show(
+                        strings.str_ask_del_bu + BU + "?",
+                        strings.str_atention,
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question);
 
@@ -161,16 +167,18 @@ namespace BUM
                 }
                 else
                 {
-                    MessageBox.Show("¡Selecciona un juego priero MELON!", 
-                        "Error",
+                    MessageBox.Show(
+                        strings.str_melon, 
+                        strings.str_error,
                         MessageBoxButtons.OK, 
                         MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("El nombre del backup no puede estar en blanco", 
-                    "Error",
+                MessageBox.Show(
+                    strings.str_err_blank_save,
+                    strings.str_error,
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Error);
             }
@@ -181,10 +189,11 @@ namespace BUM
         {
             if ((lstJuegos.Items.Count > 0) && (LstSaves.Items.Count > 0))
             {
-                if (LstSaves.SelectedItem.ToString() != "")
+                if (/*LstSaves.SelectedItem.ToString() != "" && */(LstSaves.SelectedIndex >= 0))
                 {
-                    DialogResult msg = MessageBox.Show("¿Estas seguro de que quieres estaurar este backup?, se perdera el save actual.",
-                        "Atencion",
+                    DialogResult msg = MessageBox.Show(
+                        strings.str_ask_load_save,
+                        strings.str_atention,
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question);
 

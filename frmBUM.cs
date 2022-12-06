@@ -1,5 +1,6 @@
 ﻿using BUM.Properties;
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
@@ -53,7 +55,7 @@ namespace BUM
             else
             {
                 MessageBox.Show(
-                    "El nombre del jueo no puede estar en blanco", 
+                    strings.str_err_blank_game, 
                     "Error",
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Error);
@@ -63,8 +65,8 @@ namespace BUM
         private void btnBorrarJuego_Click(object sender, EventArgs e)
         {
             DialogResult msg = MessageBox.Show(
-                "¿Seguro que quieres borrar el juego de la lista?\nLos BackUps no se borraran.",
-                "Atencion",
+                strings.str_ask_del_game,
+                strings.str_atention,
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 

@@ -100,6 +100,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="recursive.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="Properties\strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
     <Compile Include="userData.cs" />
     <EmbeddedResource Include="frmBUM.resx">
       <DependentUpon>frmBUM.cs</DependentUpon>
@@ -113,6 +118,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Properties\strings.es.resx" />
+    <EmbeddedResource Include="Properties\strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="BUM_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

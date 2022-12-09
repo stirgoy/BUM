@@ -6,7 +6,6 @@ using System.Windows.Forms;
 
 namespace BUM
 {
-    [Serializable]
     internal static class Program
     {
         /// <summary>

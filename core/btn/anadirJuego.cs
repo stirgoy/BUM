@@ -12,10 +12,10 @@ namespace BUM
         {
             if (!(txtNombreJuego.Text == ""))
             {
-                string DATA = decrypt(Settings.Default.listaJuegos);
+                string DATA = Settings.Default.listaJuegos;
                 if (!(DATA == "")) { DATA += ";"; }
                 DATA += juego + "," + rutaSave;
-                Settings.Default.listaJuegos = encrypt(DATA);
+                Settings.Default.listaJuegos = DATA;
                 Settings.Default.Save();
                 actualizarLista();
             }

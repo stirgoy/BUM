@@ -29,7 +29,7 @@ namespace BUM
                 }
             }
 
-            Settings.Default.listaJuegos = encrypt(newS);
+            Settings.Default.listaJuegos = newS;
             Settings.Default.Save();
         }
     }

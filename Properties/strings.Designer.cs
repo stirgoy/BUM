@@ -61,24 +61,6 @@ namespace BUM.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Export Cfg..
-        /// </summary>
-        internal static string btn_export_cfg {
-            get {
-                return ResourceManager.GetString("btn_export_cfg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Import Cfg..
-        /// </summary>
-        internal static string btn_import_cfg {
-            get {
-                return ResourceManager.GetString("btn_import_cfg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Add.
         /// </summary>
         internal static string str_add {

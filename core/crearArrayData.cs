@@ -14,7 +14,7 @@ namespace BUM
     {
         string[,] crearArrayData()
         {
-            string data = decrypt(Settings.Default.listaJuegos);
+            string data = Settings.Default.listaJuegos;
             string[] primerParse = data.Split(';');
             string[,] ret = new string[primerParse.Length, 2];
 

@@ -136,16 +136,5 @@ namespace BUM
             Settings.Default.chkAskRestore = chkAskRestore.Checked;
             Settings.Default.Save();
         }
-
-        private void btnImport_Click(object sender, EventArgs e)
-        {
-            loadUserConfig();
-            actualizarLista();
-        }
-
-        private void btnExport_Click(object sender, EventArgs e)
-        {
-            saveUserConfig();
-        }
     }
 }

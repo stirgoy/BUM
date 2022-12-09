@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btn_export_cfg" xml:space="preserve">
-    <value>Exportar Conf.</value>
-  </data>
-  <data name="btn_import_cfg" xml:space="preserve">
-    <value>Importar Conf.</value>
-  </data>
   <data name="str_add" xml:space="preserve">
     <value>Añadir</value>
   </data>

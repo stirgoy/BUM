@@ -89,6 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="core\crypto.cs" />
     <Compile Include="core\lst\actualizarListaSaves.cs" />
     <Compile Include="core\btn\anadirJuego.cs" />
     <Compile Include="core\btn\anadirSave.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="core\btn\borrarJuego.cs" />
     <Compile Include="core\crearArrayData.cs" />
     <Compile Include="core\btn\restaurarSave.cs" />
+    <Compile Include="core\userConfig.cs" />
     <Compile Include="frmBUM.cs">
       <SubType>Form</SubType>
     </Compile>

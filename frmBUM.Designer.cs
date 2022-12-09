@@ -43,6 +43,10 @@
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnAbrirUbicacion = new System.Windows.Forms.Button();
             this.chkAskRestore = new System.Windows.Forms.CheckBox();
+            this.SFD = new System.Windows.Forms.SaveFileDialog();
+            this.OFD = new System.Windows.Forms.OpenFileDialog();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstJuegos
@@ -176,11 +180,44 @@
             this.chkAskRestore.UseVisualStyleBackColor = true;
             this.chkAskRestore.CheckedChanged += new System.EventHandler(this.chkAskRestore_CheckedChanged);
             // 
+            // SFD
+            // 
+            this.SFD.DefaultExt = "bum";
+            this.SFD.FileName = "userSettings";
+            // 
+            // OFD
+            // 
+            this.OFD.DefaultExt = "bum";
+            this.OFD.FileName = ".bum";
+            this.OFD.Filter = "BUM|*.bum";
+            // 
+            // btnExport
+            // 
+            this.btnExport.Location = new System.Drawing.Point(495, 342);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(95, 23);
+            this.btnExport.TabIndex = 11;
+            this.btnExport.Text = "exportcfg";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // btnImport
+            // 
+            this.btnImport.Location = new System.Drawing.Point(495, 313);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(95, 23);
+            this.btnImport.TabIndex = 12;
+            this.btnImport.Text = "importcfg";
+            this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
             // frmBUM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 377);
+            this.Controls.Add(this.btnImport);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.chkAskRestore);
             this.Controls.Add(this.btnAbrirUbicacion);
             this.Controls.Add(this.btnRestaurar);
@@ -220,6 +257,10 @@
         private System.Windows.Forms.Button btnRestaurar;
         private System.Windows.Forms.Button btnAbrirUbicacion;
         private System.Windows.Forms.CheckBox chkAskRestore;
+        private System.Windows.Forms.SaveFileDialog SFD;
+        private System.Windows.Forms.OpenFileDialog OFD;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Button btnImport;
     }
 }
 

@@ -1,10 +1,8 @@
 ﻿using BUM.Properties;
-using System;
-using System.Windows.Forms;
 
 namespace BUM
 {
-    class inicio { }
+    class init { }
 
     public partial class frmBUM
     {
@@ -27,13 +25,15 @@ namespace BUM
             btnBorrarSave.Text = strings.str_delete;
             btnRestaurar.Text = strings.str_restore;
             btnAbrirUbicacion.Text = strings.str_open_folder;
+            chkAskRestore.Text = strings.str_chk_ask_restore;
+            /*
+                Settings
+            */
 
-            //Load user data
-            if (!(Settings.Default.listaJuegos == null) && !(Settings.Default.listaJuegos == ""))
-            {
-                actualizarLista();               
-                
-            }
+            //Fill list only if have data
+            if (!(Settings.Default.listaJuegos == null) && !(Settings.Default.listaJuegos == "")) { actualizarLista(); }
+            chkAskRestore.Checked = Settings.Default.chkAskRestore;
+
         }
     }
 }

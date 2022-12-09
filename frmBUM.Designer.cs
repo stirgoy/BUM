@@ -42,6 +42,7 @@
             this.btnAnadirSave = new System.Windows.Forms.Button();
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnAbrirUbicacion = new System.Windows.Forms.Button();
+            this.chkAskRestore = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lstJuegos
@@ -145,7 +146,7 @@
             // 
             // btnRestaurar
             // 
-            this.btnRestaurar.Location = new System.Drawing.Point(193, 313);
+            this.btnRestaurar.Location = new System.Drawing.Point(193, 290);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(75, 23);
             this.btnRestaurar.TabIndex = 8;
@@ -163,11 +164,24 @@
             this.btnAbrirUbicacion.UseVisualStyleBackColor = true;
             this.btnAbrirUbicacion.Click += new System.EventHandler(this.btnAbrirUbicacion_Click);
             // 
+            // chkAskRestore
+            // 
+            this.chkAskRestore.AutoSize = true;
+            this.chkAskRestore.Location = new System.Drawing.Point(193, 319);
+            this.chkAskRestore.Name = "chkAskRestore";
+            this.chkAskRestore.Size = new System.Drawing.Size(122, 17);
+            this.chkAskRestore.TabIndex = 10;
+            this.chkAskRestore.Tag = "str_chk_ask_restore";
+            this.chkAskRestore.Text = "str_chk_ask_restore";
+            this.chkAskRestore.UseVisualStyleBackColor = true;
+            this.chkAskRestore.CheckedChanged += new System.EventHandler(this.chkAskRestore_CheckedChanged);
+            // 
             // frmBUM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 377);
+            this.Controls.Add(this.chkAskRestore);
             this.Controls.Add(this.btnAbrirUbicacion);
             this.Controls.Add(this.btnRestaurar);
             this.Controls.Add(this.txtSave);
@@ -205,6 +219,7 @@
         private System.Windows.Forms.Button btnAnadirSave;
         private System.Windows.Forms.Button btnRestaurar;
         private System.Windows.Forms.Button btnAbrirUbicacion;
+        private System.Windows.Forms.CheckBox chkAskRestore;
     }
 }
 

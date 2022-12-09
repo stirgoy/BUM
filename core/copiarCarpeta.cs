@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BUM
-{
-    internal class recursive
+    {
+    class copiarCarpeta
     {
     }
     public partial class frmBUM
     {
-        private static void copiarCarpeta(string rutaCopia, string rutaDestino)
+        void copiarCarpeta(string rutaCopia, string rutaDestino, bool restaurar = false)
         {            
             foreach (string dir in Directory.GetDirectories(rutaCopia, "*", SearchOption.AllDirectories))
             {                 
@@ -24,10 +24,11 @@ namespace BUM
                         
             foreach (string archivo in Directory.GetFiles(rutaCopia, "*.*", SearchOption.AllDirectories))
             {
-                if (!archivo.Contains("BUM"))   //filtro para carpeta BUM
-                {
-                    File.Copy(archivo, archivo.Replace(rutaCopia, rutaDestino), true);
-                }
+                bool pass = false;
+                if (!archivo.Contains("BUM")) { pass = true; }   //filtro para carpeta BUM
+                if (restaurar) { pass = true; }                  //bypass para restaurar
+
+                if (pass) { File.Copy(archivo, archivo.Replace(rutaCopia, rutaDestino), true); }
             }
         }
     }

@@ -97,7 +97,30 @@ namespace BUM
 
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
-            restaurarSave();
+            if ((lstJuegos.Items.Count > 0) && (LstSaves.Items.Count > 0)) //exception prevent
+            {
+                if ((LstSaves.SelectedIndex >= 0))
+                {
+                    DialogResult msg;
+                    if (chkAskRestore.Checked)
+                    {
+                        msg = DialogResult.Yes;
+                    }
+                    else
+                    {
+                        msg = MessageBox.Show(
+                            strings.str_ask_load_save,
+                            strings.str_atention,
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question);
+                    }
+
+                    if (msg == DialogResult.Yes)
+                    { 
+                        restaurarSave();
+                    }
+                }
+            }
         }
 
         private void btnAbrirUbicacion_Click(object sender, EventArgs e)
@@ -106,6 +129,12 @@ namespace BUM
             ListViewItem item = lstJuegos.SelectedItems[0];
             string ruta = item.SubItems[1].Text;
             Process.Start("explorer", ruta);
+        }
+
+        private void chkAskRestore_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.Default.chkAskRestore = chkAskRestore.Checked;
+            Settings.Default.Save();
         }
     }
 }

@@ -135,6 +135,9 @@
   <data name="str_backup" xml:space="preserve">
     <value>Backup</value>
   </data>
+  <data name="str_chk_ask_restore" xml:space="preserve">
+    <value>Preguntar antes de restaurar</value>
+  </data>
   <data name="str_col_juegos" xml:space="preserve">
     <value>Juegos</value>
   </data>

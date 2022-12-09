@@ -115,6 +115,15 @@ namespace BUM.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ask before restore.
+        /// </summary>
+        internal static string str_chk_ask_restore {
+            get {
+                return ResourceManager.GetString("str_chk_ask_restore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Game.
         /// </summary>
         internal static string str_col_juegos {
